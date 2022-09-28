@@ -1,0 +1,14 @@
+{
+  "name": "vuepress-articles",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs --temp .temp",
+    "build": "vuepress build docs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "dayjs": "^1.11.5",
+    "vuepress": "^1.9.7"
+  }
+}
