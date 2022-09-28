@@ -2,7 +2,7 @@ const dayjs = require('dayjs');
 
 module.exports = {
   // header左上角文字
-  title: '仁和众拓',
+  title: '不加冰',
   base: '/',
   markdown: {
     // 代码行号
@@ -10,7 +10,7 @@ module.exports = {
   },
   themeConfig: {
     // header左上角logo
-    logo: 'https://www.renhegroup.com.cn/img/LOGO_04.ico',
+    logo: '/2022-03-24_115321.png',
     nav: [
       {
         text: '随心记',
@@ -37,7 +37,7 @@ module.exports = {
     // displayAllHeaders: true,
     sidebar: {
       '/pages/notes/': [
-        ['/pages/notes/01-2022年中', '22年中记录'],
+        ['/pages/notes/01-2022年中', '2022年中记录'],
       ],
       '/pages/vue/': [
         ['/pages/vue/插槽、组件.md', '插槽&组件'],
