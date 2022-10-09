@@ -1,4 +1,10 @@
 const dayjs = require('dayjs');
+// 中文化
+require('dayjs/locale/zh-cn');
+dayjs.locale('zh-cn');
+// formnow
+const relativeTime = require('dayjs/plugin/relativeTime');
+dayjs.extend(relativeTime);
 
 module.exports = {
   // header左上角文字
@@ -38,6 +44,7 @@ module.exports = {
     sidebar: {
       '/pages/notes/': [
         ['/pages/notes/01-2022年中', '2022年中记录'],
+        ['/pages/notes/02-2022年尾', '2022年尾记录'],
       ],
       '/pages/vue/': [
         ['/pages/vue/插槽、组件.md', '插槽&组件'],
@@ -60,7 +67,7 @@ module.exports = {
         ['/pages/engineering/webpack基础配置', 'webpack基础配置'],
       ],
     },
-    lastUpdated: 'Last Updated',
+    lastUpdated: '上次更新',
   },
   description: '',
   plugins: [
@@ -68,7 +75,8 @@ module.exports = {
       '@vuepress/last-updated',
       {
         transformer: timestamp => {
-          return dayjs(timestamp).format('YYYY/MM/DD HH:mm:ss');
+          return `${dayjs(timestamp).fromNow()} (${dayjs(timestamp).format('YYYY/MM/DD HH:mm')})`;
+          // return dayjs(timestamp).format('YYYY/MM/DD HH:mm:ss');
         }
       }
     ]
