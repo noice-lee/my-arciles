@@ -35,6 +35,10 @@ module.exports = {
         link: '/pages/data/队列结构.md',
       },
       {
+        text: '力扣',
+        link: '/pages/leetcode/easy/001.两数之和',
+      },
+      {
         text: '前端工程化',
         link: '/pages/engineering/引入ESLint、Prettier、pre-commit',
       },
@@ -48,7 +52,7 @@ module.exports = {
       ],
       '/pages/vue/': [
         ['/pages/vue/插槽、组件.md', '插槽&组件'],
-        ['/pages/vue/过渡&动画.md', '过渡&动画'],
+        ['/pages/vue/过渡、动画.md', '过渡&动画'],
         ['/pages/vue/引入高德.md', '引入高德'],
       ],
       '/pages/uniapp/': [
@@ -61,6 +65,36 @@ module.exports = {
         ['/pages/data/栈结构', '栈结构'],
         ['/pages/data/双向链表', '链表'],
         ['/pages/data/深度、广度优先遍历', '深度、广度优先遍历'],
+      ],
+      '/pages/leetcode/': [
+        {
+          title: '简单',
+          path: '/pages/leetcode/easy/001.两数之和',
+          children: [
+            {
+              title: '1.两数之和',
+              path: '/pages/leetcode/easy/001.两数之和',
+            },
+            {
+              title: '9.回文数',
+              path: '/pages/leetcode/easy/009.回文数',
+            },
+            {
+              title: '13.罗马数字转整数',
+              path: '/pages/leetcode/easy/013.罗马数字转整数',
+            },
+          ]
+        },
+        {
+          title: '中等',
+          path: '/pages/leetcode/medium/002.两数相加',
+          children: [
+            {
+              title: '2.两数相加',
+              path: '/pages/leetcode/medium/002.两数相加',
+            },
+          ]
+        },
       ],
       '/pages/engineering/': [
         ['/pages/engineering/引入ESLint、Prettier、pre-commit.md', '代码风格'],
