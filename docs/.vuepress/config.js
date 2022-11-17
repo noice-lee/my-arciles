@@ -9,7 +9,7 @@ dayjs.extend(relativeTime);
 module.exports = {
   // header左上角文字
   title: '不加冰',
-  base: '/',
+  base: '/my-articles/',
   markdown: {
     // 代码行号
     lineNumbers: true,
