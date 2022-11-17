@@ -98,7 +98,8 @@ module.exports = {
       ],
       '/pages/engineering/': [
         ['/pages/engineering/引入ESLint、Prettier、pre-commit.md', '代码风格'],
-        ['/pages/engineering/webpack基础配置', 'webpack基础配置'],
+        ['/pages/engineering/webpack基础配置', 'Webpack基础配置'],
+        ['/pages/engineering/Git', 'Git'],
       ],
     },
     lastUpdated: '上次更新',
@@ -109,8 +110,7 @@ module.exports = {
       '@vuepress/last-updated',
       {
         transformer: timestamp => {
-          return `${dayjs(timestamp).fromNow()} (${dayjs(timestamp).format('YYYY/MM/DD HH:mm')})`;
-          // return dayjs(timestamp).format('YYYY/MM/DD HH:mm:ss');
+          return dayjs(timestamp).format('YYYY/MM/DD HH:mm');
         }
       }
     ]
