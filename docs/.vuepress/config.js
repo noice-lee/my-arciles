@@ -110,7 +110,8 @@ module.exports = {
       '@vuepress/last-updated',
       {
         transformer: timestamp => {
-          return dayjs(timestamp).format('YYYY/MM/DD HH:mm');
+          return timestamp;
+          // return dayjs(timestamp).format('YYYY/MM/DD HH:mm');
         }
       }
     ]
