@@ -10,8 +10,9 @@ jobs:
       # 拉取代码
       - name: Checkout 🛎️
         uses: actions/checkout@v3
-        # 要获取的提交数，0 表示所有历史记录，默认为 1。
-        fetch-depth: 0
+        with:
+          # 要获取的提交数，0 表示所有历史记录，默认为 1。
+          fetch-depth: 0
 
       # 设置yarn缓存目录
       - name: Get yarn cache directory path
