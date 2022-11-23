@@ -23,6 +23,14 @@ module.exports = {
         link: '/pages/notes/01-2022年中',
       },
       {
+        text: '前端工程化',
+        link: '/pages/engineering/引入ESLint、Prettier、pre-commit',
+      },
+      {
+        text: '数据结构',
+        link: '/pages/data/队列结构.md',
+      },
+      {
         text: 'Vue学习',
         link: '/pages/vue/插槽、组件.md',
       },
@@ -31,16 +39,8 @@ module.exports = {
         link: '/pages/uniapp/uCharts地图标点.md',
       },
       {
-        text: '数据结构',
-        link: '/pages/data/队列结构.md',
-      },
-      {
         text: '力扣',
         link: '/pages/leetcode/easy/001.两数之和',
-      },
-      {
-        text: '前端工程化',
-        link: '/pages/engineering/引入ESLint、Prettier、pre-commit',
       },
     ],
     // 显示左侧所有标题
@@ -49,6 +49,17 @@ module.exports = {
       '/pages/notes/': [
         ['/pages/notes/01-2022年中', '2022年中记录'],
         ['/pages/notes/02-2022年尾', '2022年尾记录'],
+      ],
+      '/pages/engineering/': [
+        ['/pages/engineering/引入ESLint、Prettier、pre-commit.md', '代码风格'],
+        ['/pages/engineering/webpack基础配置', 'Webpack基础配置'],
+        ['/pages/engineering/Git', 'Git'],
+      ],
+      '/pages/data/': [
+        ['/pages/data/队列结构', '队列结构'],
+        ['/pages/data/栈结构', '栈结构'],
+        ['/pages/data/双向链表', '链表'],
+        ['/pages/data/深度、广度优先遍历', '深度、广度优先遍历'],
       ],
       '/pages/vue/': [
         ['/pages/vue/插槽、组件.md', '插槽&组件'],
@@ -59,12 +70,6 @@ module.exports = {
         ['/pages/uniapp/uCharts地图标点', 'uCharts地图标点'],
         ['/pages/uniapp/编译安卓之webview', '编译安卓之webview'],
         ['/pages/uniapp/解决uni-datetime-picker选择时间长度', 'uni-datetime-picker选择时间长度'],
-      ],
-      '/pages/data/': [
-        ['/pages/data/队列结构', '队列结构'],
-        ['/pages/data/栈结构', '栈结构'],
-        ['/pages/data/双向链表', '链表'],
-        ['/pages/data/深度、广度优先遍历', '深度、广度优先遍历'],
       ],
       '/pages/leetcode/': [
         {
@@ -95,11 +100,6 @@ module.exports = {
             },
           ]
         },
-      ],
-      '/pages/engineering/': [
-        ['/pages/engineering/引入ESLint、Prettier、pre-commit.md', '代码风格'],
-        ['/pages/engineering/webpack基础配置', 'Webpack基础配置'],
-        ['/pages/engineering/Git', 'Git'],
       ],
     },
     lastUpdated: '上次更新',
