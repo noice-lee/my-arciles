@@ -20,7 +20,7 @@ module.exports = {
     nav: [
       {
         text: '随心记',
-        link: '/pages/notes/01-2022年中',
+        link: '/pages/notes/01-2022年6月记',
       },
       {
         text: '前端工程化',
@@ -47,8 +47,9 @@ module.exports = {
     // displayAllHeaders: true,
     sidebar: {
       '/pages/notes/': [
-        ['/pages/notes/01-2022年中', '2022年中记录'],
-        ['/pages/notes/02-2022年尾', '2022年尾记录'],
+        ['/pages/notes/01-2022年6月记', '2022年6月记'],
+        ['/pages/notes/02-2022年9月记', '2022年9月记'],
+        ['/pages/notes/03-2022年12月记', '2022年12月记'],
       ],
       '/pages/engineering/': [
         ['/pages/engineering/引入ESLint、Prettier、pre-commit.md', '代码风格'],
