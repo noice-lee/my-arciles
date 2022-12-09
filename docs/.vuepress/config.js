@@ -89,6 +89,11 @@ module.exports = {
               title: '13.罗马数字转整数',
               path: '/pages/leetcode/easy/013.罗马数字转整数',
             },
+            
+            {
+              title: '14.最长公共前缀',
+              path: '/pages/leetcode/easy/014.最长公共前缀',
+            },
           ]
         },
         {
