@@ -2,7 +2,7 @@
 sidebarDepth: 2
 ---
 
-# `web-view`
+# 编译安卓之`web-view`
 
 > `<web-view>` 组件默认铺满全屏并且层级高于前端组件。App端想调节大小或在其上覆盖内容需使用plus规范——uniapp官方
 

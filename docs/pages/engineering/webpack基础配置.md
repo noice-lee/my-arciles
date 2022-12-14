@@ -2,6 +2,8 @@
 sidebarDepth: 2
 ---
 
+# webpack基础配置
+
 > 仅做为学习webpack基础记录（视频学习），基于webpack5
 
 ## webpack常见概念

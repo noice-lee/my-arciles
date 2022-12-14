@@ -39,8 +39,12 @@ module.exports = {
         link: '/pages/uniapp/uCharts地图标点.md',
       },
       {
-        text: '力扣',
+        text: '力扣算法',
         link: '/pages/leetcode/easy/001.两数之和',
+      },
+      {
+        text: '学习笔记',
+        link: '/pages/studyNote/慕课网大前端',
       },
     ],
     // 显示左侧所有标题
@@ -89,7 +93,6 @@ module.exports = {
               title: '13.罗马数字转整数',
               path: '/pages/leetcode/easy/013.罗马数字转整数',
             },
-            
             {
               title: '14.最长公共前缀',
               path: '/pages/leetcode/easy/014.最长公共前缀',
@@ -106,6 +109,11 @@ module.exports = {
             },
           ]
         },
+      ],
+      '/pages/studyNote/': [
+        ['/pages/studyNote/慕课网大前端', '慕课网大前端'],
+        ['/pages/studyNote/开课吧web高级', '开课吧web高级'],
+        ['/pages/studyNote/尚硅谷React', '尚硅谷React'],
       ],
     },
     lastUpdated: '上次更新',

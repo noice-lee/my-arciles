@@ -1,3 +1,5 @@
+# Git
+
 ## 规范提交信息
 
 1. 引入VSCode插件`git-commit-plugin`
