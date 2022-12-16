@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>搜索插入位置 | 不加冰</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/my-articles/assets/css/0.styles.82ef5590.css" as="style"><link rel="preload" href="/my-articles/assets/js/app.cbc0a68c.js" as="script"><link rel="preload" href="/my-articles/assets/js/2.08b81b1e.js" as="script"><link rel="preload" href="/my-articles/assets/js/24.ca2fe8a2.js" as="script"><link rel="prefetch" href="/my-articles/assets/js/10.7dac5d3b.js"><link rel="prefetch" href="/my-articles/assets/js/11.130d0f03.js"><link rel="prefetch" href="/my-articles/assets/js/12.2644bb8f.js"><link rel="prefetch" href="/my-articles/assets/js/13.6da69446.js"><link rel="prefetch" href="/my-articles/assets/js/14.3e79a3f3.js"><link rel="prefetch" href="/my-articles/assets/js/15.f6cbb5c9.js"><link rel="prefetch" href="/my-articles/assets/js/16.f3d56a3e.js"><link rel="prefetch" href="/my-articles/assets/js/17.f7ecb380.js"><link rel="prefetch" href="/my-articles/assets/js/18.b58a8ac8.js"><link rel="prefetch" href="/my-articles/assets/js/19.3887cf9d.js"><link rel="prefetch" href="/my-articles/assets/js/20.4162228b.js"><link rel="prefetch" href="/my-articles/assets/js/21.057283dd.js"><link rel="prefetch" href="/my-articles/assets/js/22.3ef1b05a.js"><link rel="prefetch" href="/my-articles/assets/js/23.fa14b25a.js"><link rel="prefetch" href="/my-articles/assets/js/25.d390e464.js"><link rel="prefetch" href="/my-articles/assets/js/26.421f9955.js"><link rel="prefetch" href="/my-articles/assets/js/27.e37bcaaa.js"><link rel="prefetch" href="/my-articles/assets/js/28.e795c17a.js"><link rel="prefetch" href="/my-articles/assets/js/29.d4d38f9c.js"><link rel="prefetch" href="/my-articles/assets/js/3.e1e4c548.js"><link rel="prefetch" href="/my-articles/assets/js/30.5b9a4748.js"><link rel="prefetch" href="/my-articles/assets/js/31.e733251c.js"><link rel="prefetch" href="/my-articles/assets/js/32.56367b13.js"><link rel="prefetch" href="/my-articles/assets/js/33.cc5dada6.js"><link rel="prefetch" href="/my-articles/assets/js/34.fbc3db07.js"><link rel="prefetch" href="/my-articles/assets/js/35.26ffc2e9.js"><link rel="prefetch" href="/my-articles/assets/js/36.47a6d566.js"><link rel="prefetch" href="/my-articles/assets/js/37.26685d35.js"><link rel="prefetch" href="/my-articles/assets/js/38.ee4aef09.js"><link rel="prefetch" href="/my-articles/assets/js/4.ef32f42c.js"><link rel="prefetch" href="/my-articles/assets/js/5.2909279c.js"><link rel="prefetch" href="/my-articles/assets/js/6.73ddc096.js"><link rel="prefetch" href="/my-articles/assets/js/7.338f1173.js"><link rel="prefetch" href="/my-articles/assets/js/8.c4395f77.js"><link rel="prefetch" href="/my-articles/assets/js/9.7f5cfa74.js">
+    <link rel="stylesheet" href="/my-articles/assets/css/0.styles.82ef5590.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/my-articles/" class="home-link router-link-active"><img src="/my-articles/2022-03-24_115321.png" alt="不加冰" class="logo"> <span class="site-name can-hide">不加冰</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/my-articles/pages/notes/01-2022年6月记.html" class="nav-link">
+  随心记
+</a></div><div class="nav-item"><a href="/my-articles/pages/engineering/引入ESLint、Prettier、pre-commit.html" class="nav-link">
+  前端工程化
+</a></div><div class="nav-item"><a href="/my-articles/pages/data/队列结构.html" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/my-articles/pages/vue/插槽、组件.html" class="nav-link">
+  Vue学习
+</a></div><div class="nav-item"><a href="/my-articles/pages/uniapp/uCharts地图标点.html" class="nav-link">
+  uniapp
+</a></div><div class="nav-item"><a href="/my-articles/pages/leetcode/easy/001.两数之和.html" class="nav-link">
+  力扣算法
+</a></div><div class="nav-item"><a href="/my-articles/pages/studyNote/慕课网大前端.html" class="nav-link">
+  学习笔记
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/my-articles/pages/notes/01-2022年6月记.html" class="nav-link">
+  随心记
+</a></div><div class="nav-item"><a href="/my-articles/pages/engineering/引入ESLint、Prettier、pre-commit.html" class="nav-link">
+  前端工程化
+</a></div><div class="nav-item"><a href="/my-articles/pages/data/队列结构.html" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/my-articles/pages/vue/插槽、组件.html" class="nav-link">
+  Vue学习
+</a></div><div class="nav-item"><a href="/my-articles/pages/uniapp/uCharts地图标点.html" class="nav-link">
+  uniapp
+</a></div><div class="nav-item"><a href="/my-articles/pages/leetcode/easy/001.两数之和.html" class="nav-link">
+  力扣算法
+</a></div><div class="nav-item"><a href="/my-articles/pages/studyNote/慕课网大前端.html" class="nav-link">
+  学习笔记
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/my-articles/pages/leetcode/easy/001.两数之和" class="sidebar-heading clickable open"><span>简单</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/my-articles/pages/leetcode/easy/001.两数之和.html" class="sidebar-link">1.两数之和</a></li><li><a href="/my-articles/pages/leetcode/easy/009.回文数.html" class="sidebar-link">9.回文数</a></li><li><a href="/my-articles/pages/leetcode/easy/013.罗马数字转整数.html" class="sidebar-link">13.罗马数字转整数</a></li><li><a href="/my-articles/pages/leetcode/easy/014.最长公共前缀.html" class="sidebar-link">14.最长公共前缀</a></li><li><a href="/my-articles/pages/leetcode/easy/020.有效的括号.html" class="sidebar-link">20.有效的括号</a></li><li><a href="/my-articles/pages/leetcode/easy/021.合并两个有序链表.html" class="sidebar-link">21.合并两个有序链表</a></li><li><a href="/my-articles/pages/leetcode/easy/026.删除有序数组中的重复项.html" class="sidebar-link">26.删除有序数组中的重复项</a></li><li><a href="/my-articles/pages/leetcode/easy/027.移除元素.html" class="sidebar-link">27.移除元素</a></li><li><a href="/my-articles/pages/leetcode/easy/035.搜索插入位置.html" class="active sidebar-link">35.搜索插入位置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/my-articles/pages/leetcode/easy/035.搜索插入位置.html#题目" class="sidebar-link">题目</a></li><li class="sidebar-sub-header"><a href="/my-articles/pages/leetcode/easy/035.搜索插入位置.html#思路" class="sidebar-link">思路</a></li><li class="sidebar-sub-header"><a href="/my-articles/pages/leetcode/easy/035.搜索插入位置.html#代码" class="sidebar-link">代码</a></li></ul></li><li><a href="/my-articles/pages/leetcode/easy/058.最后一个单词的长度.html" class="sidebar-link">58.最后一个单词的长度</a></li><li><a href="/my-articles/pages/leetcode/easy/066.加一.html" class="sidebar-link">66.加一</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/my-articles/pages/leetcode/medium/002.两数相加" class="sidebar-heading clickable"><span>中等</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="搜索插入位置"><a href="#搜索插入位置" class="header-anchor">#</a> 搜索插入位置</h1> <h2 id="题目"><a href="#题目" class="header-anchor">#</a> 题目</h2> <p>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。</p> <p>请必须使用时间复杂度为 <code>O(log n)</code> 的算法。</p> <p><strong>示例 1:</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>输入: nums = [1,3,5,6], target = 5
+输出: 2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><strong>示例 2:</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>输入: nums = [1,3,5,6], target = 2
+输出: 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><strong>示例 3:</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>输入: nums = [1,3,5,6], target = 7
+输出: 4
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><strong>提示:</strong></p> <ul><li>1 &lt;= nums.length &lt;= 104</li> <li>-104 &lt;= nums[i] &lt;= 104</li> <li>nums 为 无重复元素 的 升序 排列数组</li> <li>-104 &lt;= target &lt;= 104</li></ul> <h2 id="思路"><a href="#思路" class="header-anchor">#</a> 思路</h2> <p>二分法，定义双指针，分别指向头和尾</p> <ul><li>循环判断如果左边的是否不大于右边的
+<ul><li>取头尾两个的中间数的向下取整</li> <li>如果中间数等于目标值，则返回该位置</li> <li>如果中间数大于目标值，则将头指针移动至中间数位置</li> <li>否则将尾指针移动到中间数位置</li> <li>如果头指针的下一位就是尾指针，则代表数组中没有目标值，返回尾指针即是应该插入的位置</li></ul></li></ul> <h2 id="代码"><a href="#代码" class="header-anchor">#</a> 代码</h2> <div class="language-ts line-numbers-mode"><pre class="language-ts"><code><span class="token keyword">function</span> <span class="token function">searchInsert</span><span class="token punctuation">(</span>nums<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> target<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 如果数组第一个就大于或者等于目标值了，直接返回0</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&gt;=</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 如果最后一个值还小于目标值，直接返回数组长度</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>nums<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">let</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  right <span class="token operator">=</span> nums<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>left <span class="token operator">&lt;=</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> n <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>left <span class="token operator">+</span> right<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">===</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> n<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">&gt;</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      right <span class="token operator">=</span> n<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      left <span class="token operator">=</span> n<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>left <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">===</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> right<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2022/12/16 09:25</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/my-articles/pages/leetcode/easy/027.移除元素.html" class="prev">
+        27.移除元素
+      </a></span> <span class="next"><a href="/my-articles/pages/leetcode/easy/058.最后一个单词的长度.html">
+        58.最后一个单词的长度
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/my-articles/assets/js/app.cbc0a68c.js" defer></script><script src="/my-articles/assets/js/2.08b81b1e.js" defer></script><script src="/my-articles/assets/js/24.ca2fe8a2.js" defer></script>
+  </body>
+</html>
