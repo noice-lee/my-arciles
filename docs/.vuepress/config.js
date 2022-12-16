@@ -57,8 +57,8 @@ module.exports = {
       ],
       '/pages/engineering/': [
         ['/pages/engineering/引入ESLint、Prettier、pre-commit.md', '代码风格'],
-        ['/pages/engineering/webpack基础配置', 'Webpack基础配置'],
         ['/pages/engineering/Git', 'Git'],
+        ['/pages/engineering/webpack基础配置', 'Webpack基础配置'],
       ],
       '/pages/data/': [
         ['/pages/data/队列结构', '队列结构'],
