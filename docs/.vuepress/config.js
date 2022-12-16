@@ -105,6 +105,26 @@ module.exports = {
               title: '21.合并两个有序链表',
               path: '/pages/leetcode/easy/021.合并两个有序链表',
             },
+            {
+              title: '26.删除有序数组中的重复项',
+              path: '/pages/leetcode/easy/026.删除有序数组中的重复项',
+            },
+            {
+              title: '27.移除元素',
+              path: '/pages/leetcode/easy/027.移除元素',
+            },
+            {
+              title: '35.搜索插入位置',
+              path: '/pages/leetcode/easy/035.搜索插入位置',
+            },
+            {
+              title: '58.最后一个单词的长度',
+              path: '/pages/leetcode/easy/058.最后一个单词的长度',
+            },
+            {
+              title: '66.加一',
+              path: '/pages/leetcode/easy/066.加一',
+            },
           ]
         },
         {
