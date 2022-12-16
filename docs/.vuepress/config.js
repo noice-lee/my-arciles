@@ -97,6 +97,14 @@ module.exports = {
               title: '14.最长公共前缀',
               path: '/pages/leetcode/easy/014.最长公共前缀',
             },
+            {
+              title: '20.有效的括号',
+              path: '/pages/leetcode/easy/020.有效的括号',
+            },
+            {
+              title: '21.合并两个有序链表',
+              path: '/pages/leetcode/easy/021.合并两个有序链表',
+            },
           ]
         },
         {
