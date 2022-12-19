@@ -125,6 +125,23 @@ module.exports = {
               title: '66.加一',
               path: '/pages/leetcode/easy/066.加一',
             },
+            {
+              title: '67.二进制求和',
+              path: '/pages/leetcode/easy/067.二进制求和',
+            },
+            {
+              title: '69.x 的平方根',
+              path: '/pages/leetcode/easy/069.x 的平方根',
+            },
+            {
+              title: '83.删除排序链表中的重复元素',
+              path: '/pages/leetcode/easy/083.删除排序链表中的重复元素',
+            },
+            
+            {
+              title: '88.合并两个有序数组',
+              path: '/pages/leetcode/easy/088.合并两个有序数组',
+            },
           ]
         },
         {
