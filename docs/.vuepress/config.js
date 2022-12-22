@@ -137,10 +137,17 @@ module.exports = {
               title: '83.删除排序链表中的重复元素',
               path: '/pages/leetcode/easy/083.删除排序链表中的重复元素',
             },
-            
             {
               title: '88.合并两个有序数组',
               path: '/pages/leetcode/easy/088.合并两个有序数组',
+            },
+            {
+              title: '94.二叉树的中序遍历',
+              path: '/pages/leetcode/easy/094.二叉树的中序遍历',
+            },
+            {
+              title: '118.杨辉三角',
+              path: '/pages/leetcode/easy/118.杨辉三角',
             },
           ]
         },
