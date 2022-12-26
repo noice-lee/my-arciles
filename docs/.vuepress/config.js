@@ -149,6 +149,10 @@ module.exports = {
               title: '118.杨辉三角',
               path: '/pages/leetcode/easy/118.杨辉三角',
             },
+            {
+              title: '119.杨辉三角 II',
+              path: '/pages/leetcode/easy/119.杨辉三角 II',
+            },
           ]
         },
         {
