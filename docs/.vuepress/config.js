@@ -153,6 +153,14 @@ module.exports = {
               title: '119.杨辉三角 II',
               path: '/pages/leetcode/easy/119.杨辉三角 II',
             },
+            {
+              title: '121.买卖股票的最佳时机',
+              path: '/pages/leetcode/easy/121.买卖股票的最佳时机',
+            },
+            {
+              title: '125.验证回文串',
+              path: '/pages/leetcode/easy/125.验证回文串',
+            },
           ]
         },
         {
