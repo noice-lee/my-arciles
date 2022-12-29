@@ -4,7 +4,7 @@ heroImage: /img.webp
 heroText: 学习记录
 tagline: 欢迎观看不加冰的学习记录
 actionText: 👉 👀 👈
-actionLink: /pages/notes/01-2022年6月记
+actionLink: /pages/leetcode/easy/001.两数之和
 features:
 - title: 随心记
   details: 记录心态、记录生活
