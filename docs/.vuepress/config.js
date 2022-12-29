@@ -161,6 +161,14 @@ module.exports = {
               title: '125.验证回文串',
               path: '/pages/leetcode/easy/125.验证回文串',
             },
+            {
+              title: '136.只出现一次的数字',
+              path: '/pages/leetcode/easy/136.只出现一次的数字',
+            },
+            {
+              title: '141.环形链表',
+              path: '/pages/leetcode/easy/141.环形链表',
+            },
           ]
         },
         {
