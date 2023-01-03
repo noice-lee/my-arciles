@@ -143,6 +143,14 @@ module.exports = {
               title: '141.环形链表',
               path: '/pages/leetcode/easy/141.环形链表',
             },
+            {
+              title: '160.相交链表',
+              path: '/pages/leetcode/easy/160.相交链表',
+            },
+            {
+              title: '168.Excel表列名称',
+              path: '/pages/leetcode/easy/168.Excel表列名称',
+            },
           ]
         },
         {
