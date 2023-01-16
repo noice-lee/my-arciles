@@ -151,6 +151,14 @@ module.exports = {
               title: '168.Excel表列名称',
               path: '/pages/leetcode/easy/168.Excel表列名称',
             },
+            {
+              title: '169.多数元素',
+              path: '/pages/leetcode/easy/169.多数元素',
+            },
+            {
+              title: '171.Excel 表列序号',
+              path: '/pages/leetcode/easy/171.Excel 表列序号',
+            },
           ]
         },
         {
