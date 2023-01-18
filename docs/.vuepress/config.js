@@ -173,6 +173,7 @@ module.exports = {
         },
       ],
       '/pages/studyNote/': [
+        ['/pages/studyNote/可视化与游戏', '可视化与游戏'],
         ['/pages/studyNote/尚硅谷React', '尚硅谷React'],
         ['/pages/studyNote/慕课网大前端', '慕课网大前端'],
         ['/pages/studyNote/开课吧web高级', '开课吧web高级'],
