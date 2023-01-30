@@ -1,6 +1,6 @@
 # 尚硅谷 React
 
-> 视频跟敲代码地址: [码云](https://gitee.com/noice__li/react-demo/)
+> 视频跟敲代码地址: [码云](https://gitee.com/noice-lee/react-demo/)
 
 ## JSX 语法规则
 

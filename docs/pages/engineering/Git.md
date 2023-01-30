@@ -96,7 +96,7 @@ jobs:
           # 注意替换为你的 GitHub 源仓库地址
           source-repo: git@github.com:noice-lee/my-articles.git
           # 注意替换为你的 Gitee 目标仓库地址
-          destination-repo: git@gitee.com:noice__li/my-articles.git
+          destination-repo: git@gitee.com:noice-lee/my-articles.git
 
 ```
 
