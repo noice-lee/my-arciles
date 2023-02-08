@@ -159,6 +159,14 @@ module.exports = {
               title: '171.Excel 表列序号',
               path: '/pages/leetcode/easy/171.Excel 表列序号',
             },
+            {
+              title: '190.颠倒二进制位',
+              path: '/pages/leetcode/easy/190.颠倒二进制位',
+            },
+            {
+              title: '191.位1的个数',
+              path: '/pages/leetcode/easy/191.位1的个数',
+            },
           ]
         },
         {
