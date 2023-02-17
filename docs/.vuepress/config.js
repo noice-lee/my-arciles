@@ -167,6 +167,14 @@ module.exports = {
               title: '191.位1的个数',
               path: '/pages/leetcode/easy/191.位1的个数',
             },
+            {
+              title: '202.快乐数',
+              path: '/pages/leetcode/easy/202.快乐数',
+            },
+            {
+              title: '203.移除链表元素',
+              path: '/pages/leetcode/easy/203.移除链表元素',
+            },
           ]
         },
         {
