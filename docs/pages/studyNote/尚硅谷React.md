@@ -414,7 +414,7 @@ class Login extends React.Compontent {
 
 #### 图示
 
-![生命周期-旧](https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ce1af42d-76fa-4a5c-9768-cebbc1aa816f/11e0cdba-2c71-4e82-b131-5ada8271fc46.png)
+<img src="./imgs/react生命周期(旧).png" />
 
 #### 组件挂载
 
@@ -455,7 +455,7 @@ class Login extends React.Compontent {
 
 1. `componentWillUnmount` --- 常用
 
-![生命周期-新](https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ce1af42d-76fa-4a5c-9768-cebbc1aa816f/30498f20-74bd-4569-9640-1b0bf001e3c5.png)
+<img src="./imgs/react生命周期(新).png" />
 
 ---
 
@@ -779,7 +779,7 @@ export default withRouter(Home);
 
 #### 原理图
 
-![redux原理图](https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ce1af42d-76fa-4a5c-9768-cebbc1aa816f/df60cad8-e776-4f18-b5d1-a2fecb2a63f0.png)
+<img src="./imgs/redux原理图.png" />
 
 #### 基础实现
 
@@ -864,7 +864,7 @@ store.dispatch(createIncrementAction(1));
 
 #### 原理图
 
-![react-redux原理图](https://vkceyugu.cdn.bspapp.com/VKCEYUGU-ce1af42d-76fa-4a5c-9768-cebbc1aa816f/5673aa66-e61a-40f2-83af-093259d269f3.png)
+<img src="./imgs/react-redux模型图.png" />
 
 #### 引入方法
 
