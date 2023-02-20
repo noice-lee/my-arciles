@@ -185,6 +185,10 @@ module.exports = {
               title: '2.两数相加',
               path: '/pages/leetcode/medium/002.两数相加',
             },
+            {
+              title: '146.LRU 缓存',
+              path: '/pages/leetcode/medium/146.LRU 缓存',
+            },
           ]
         },
       ],
