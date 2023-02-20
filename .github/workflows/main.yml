@@ -10,19 +10,17 @@ jobs:
       matrix:
         node-version: [16.14.2] #指定node版本
     steps:
-      # 设置node版本
-      - name: Use Node.js ${{ matrix.node-version }} #使用action安装node环境
-      - uses: actions/checkout@v2
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      
-      # 拉取代码
+      # 拉取代码 设置node版本
       - name: Checkout 🛎️
         uses: actions/checkout@v3
         with:
           # 要获取的提交数，0 表示所有历史记录，默认为 1。
           fetch-depth: 0
+
+      - name: Set node version
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
       # 设置yarn缓存目录
       - name: Get yarn cache directory path
