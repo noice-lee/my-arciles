@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LRU 缓存 | 不加冰</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/my-articles/assets/css/0.styles.82ef5590.css" as="style"><link rel="preload" href="/my-articles/assets/js/app.6e1f7d07.js" as="script"><link rel="preload" href="/my-articles/assets/js/2.2fae7045.js" as="script"><link rel="preload" href="/my-articles/assets/js/47.3b2e91cf.js" as="script"><link rel="prefetch" href="/my-articles/assets/js/10.236f6cfd.js"><link rel="prefetch" href="/my-articles/assets/js/11.59235104.js"><link rel="prefetch" href="/my-articles/assets/js/12.b616c485.js"><link rel="prefetch" href="/my-articles/assets/js/13.5c74cf35.js"><link rel="prefetch" href="/my-articles/assets/js/14.03805914.js"><link rel="prefetch" href="/my-articles/assets/js/15.42d1ae84.js"><link rel="prefetch" href="/my-articles/assets/js/16.6e6f2447.js"><link rel="prefetch" href="/my-articles/assets/js/17.6a6d78a6.js"><link rel="prefetch" href="/my-articles/assets/js/18.538fce41.js"><link rel="prefetch" href="/my-articles/assets/js/19.9d03793b.js"><link rel="prefetch" href="/my-articles/assets/js/20.ae9496e4.js"><link rel="prefetch" href="/my-articles/assets/js/21.30f4c6d2.js"><link rel="prefetch" href="/my-articles/assets/js/22.30091873.js"><link rel="prefetch" href="/my-articles/assets/js/23.c539f758.js"><link rel="prefetch" href="/my-articles/assets/js/24.492efe21.js"><link rel="prefetch" href="/my-articles/assets/js/25.b9c7de0f.js"><link rel="prefetch" href="/my-articles/assets/js/26.df21d45c.js"><link rel="prefetch" href="/my-articles/assets/js/27.1936162b.js"><link rel="prefetch" href="/my-articles/assets/js/28.8cd526e2.js"><link rel="prefetch" href="/my-articles/assets/js/29.b53b4870.js"><link rel="prefetch" href="/my-articles/assets/js/3.fe0cf31b.js"><link rel="prefetch" href="/my-articles/assets/js/30.63115fc7.js"><link rel="prefetch" href="/my-articles/assets/js/31.b340b56f.js"><link rel="prefetch" href="/my-articles/assets/js/32.3306fe2c.js"><link rel="prefetch" href="/my-articles/assets/js/33.6ea06d11.js"><link rel="prefetch" href="/my-articles/assets/js/34.6bfcabef.js"><link rel="prefetch" href="/my-articles/assets/js/35.ba1c41a9.js"><link rel="prefetch" href="/my-articles/assets/js/36.cdaebf72.js"><link rel="prefetch" href="/my-articles/assets/js/37.b895809c.js"><link rel="prefetch" href="/my-articles/assets/js/38.dbe90dfa.js"><link rel="prefetch" href="/my-articles/assets/js/39.0ac3a99b.js"><link rel="prefetch" href="/my-articles/assets/js/4.86334ad0.js"><link rel="prefetch" href="/my-articles/assets/js/40.12870f87.js"><link rel="prefetch" href="/my-articles/assets/js/41.83407e32.js"><link rel="prefetch" href="/my-articles/assets/js/42.5b886e48.js"><link rel="prefetch" href="/my-articles/assets/js/43.938bd23c.js"><link rel="prefetch" href="/my-articles/assets/js/44.120dac5d.js"><link rel="prefetch" href="/my-articles/assets/js/45.c7ee485b.js"><link rel="prefetch" href="/my-articles/assets/js/46.0eabca3a.js"><link rel="prefetch" href="/my-articles/assets/js/48.a04f3876.js"><link rel="prefetch" href="/my-articles/assets/js/49.df7276ae.js"><link rel="prefetch" href="/my-articles/assets/js/5.4b909c37.js"><link rel="prefetch" href="/my-articles/assets/js/50.781d10d1.js"><link rel="prefetch" href="/my-articles/assets/js/51.8de6d8ea.js"><link rel="prefetch" href="/my-articles/assets/js/52.e705d229.js"><link rel="prefetch" href="/my-articles/assets/js/53.c2dcf1c7.js"><link rel="prefetch" href="/my-articles/assets/js/54.d755bc64.js"><link rel="prefetch" href="/my-articles/assets/js/55.1af3e06f.js"><link rel="prefetch" href="/my-articles/assets/js/56.46b4f65f.js"><link rel="prefetch" href="/my-articles/assets/js/57.d874eb71.js"><link rel="prefetch" href="/my-articles/assets/js/58.fd82e51c.js"><link rel="prefetch" href="/my-articles/assets/js/59.3874e8a9.js"><link rel="prefetch" href="/my-articles/assets/js/6.7c4e0979.js"><link rel="prefetch" href="/my-articles/assets/js/7.cf85dab5.js"><link rel="prefetch" href="/my-articles/assets/js/8.9a142d2e.js"><link rel="prefetch" href="/my-articles/assets/js/9.4708d526.js">
+    <link rel="stylesheet" href="/my-articles/assets/css/0.styles.82ef5590.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/my-articles/" class="home-link router-link-active"><img src="/my-articles/2022-03-24_115321.png" alt="不加冰" class="logo"> <span class="site-name can-hide">不加冰</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/my-articles/pages/leetcode/easy/001.两数之和.html" class="nav-link">
+  力扣算法
+</a></div><div class="nav-item"><a href="/my-articles/pages/studyNote/尚硅谷React.html" class="nav-link">
+  学习笔记
+</a></div><div class="nav-item"><a href="/my-articles/pages/data/队列结构.html" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/my-articles/pages/engineering/引入ESLint、Prettier、pre-commit.html" class="nav-link">
+  前端工程化
+</a></div><div class="nav-item"><a href="/my-articles/pages/vue/插槽、组件.html" class="nav-link">
+  Vue学习
+</a></div><div class="nav-item"><a href="/my-articles/pages/uniapp/uCharts地图标点.html" class="nav-link">
+  uniapp
+</a></div><div class="nav-item"><a href="/my-articles/pages/notes/01-2022年6月记.html" class="nav-link">
+  随心记
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/my-articles/pages/leetcode/easy/001.两数之和.html" class="nav-link">
+  力扣算法
+</a></div><div class="nav-item"><a href="/my-articles/pages/studyNote/尚硅谷React.html" class="nav-link">
+  学习笔记
+</a></div><div class="nav-item"><a href="/my-articles/pages/data/队列结构.html" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/my-articles/pages/engineering/引入ESLint、Prettier、pre-commit.html" class="nav-link">
+  前端工程化
+</a></div><div class="nav-item"><a href="/my-articles/pages/vue/插槽、组件.html" class="nav-link">
+  Vue学习
+</a></div><div class="nav-item"><a href="/my-articles/pages/uniapp/uCharts地图标点.html" class="nav-link">
+  uniapp
+</a></div><div class="nav-item"><a href="/my-articles/pages/notes/01-2022年6月记.html" class="nav-link">
+  随心记
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/my-articles/pages/leetcode/easy/001.两数之和" class="sidebar-heading clickable"><span>简单</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/my-articles/pages/leetcode/medium/002.两数相加" class="sidebar-heading clickable open"><span>中等</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/my-articles/pages/leetcode/medium/002.两数相加.html" class="sidebar-link">2.两数相加</a></li><li><a href="/my-articles/pages/leetcode/medium/146.LRU 缓存.html" class="active sidebar-link">146.LRU 缓存</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/my-articles/pages/leetcode/medium/146.LRU 缓存.html#题目" class="sidebar-link">题目</a></li><li class="sidebar-sub-header"><a href="/my-articles/pages/leetcode/medium/146.LRU 缓存.html#思路" class="sidebar-link">思路</a></li><li class="sidebar-sub-header"><a href="/my-articles/pages/leetcode/medium/146.LRU 缓存.html#代码" class="sidebar-link">代码</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="lru-缓存"><a href="#lru-缓存" class="header-anchor">#</a> LRU 缓存</h1> <h2 id="题目"><a href="#题目" class="header-anchor">#</a> 题目</h2> <p>请你设计并实现一个满足 <strong>LRU (最近最少使用) 缓存</strong> 约束的数据结构。
+实现 <code>LRUCache</code> 类：</p> <ul><li><code>LRUCache(int capacity)</code> 以 <strong>正整数</strong> 作为容量 <code>capacity</code> 初始化 LRU 缓存</li> <li><code>int get(int key)</code> 如果关键字 <code>key</code> 存在于缓存中，则返回关键字的值，否则返回 <code>-1</code> 。</li> <li><code>void put(int key, int value)</code> 如果关键字 <code>key</code> 已经存在，则变更其数据值 <code>value</code> ；如果不存在，则向缓存中插入该组 <code>key-value</code> 。如果插入操作导致关键字数量超过 <code>capacity</code> ，则应该 <strong>逐出</strong> 最久未使用的关键字。
+函数 <code>get</code> 和 <code>put</code> 必须以 <code>O(1)</code> 的平均时间复杂度运行。</li></ul> <p><strong>示例：</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>输入
+[&quot;LRUCache&quot;, &quot;put&quot;, &quot;put&quot;, &quot;get&quot;, &quot;put&quot;, &quot;get&quot;, &quot;put&quot;, &quot;get&quot;, &quot;get&quot;, &quot;get&quot;]
+[[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]
+输出
+[null, null, null, 1, null, -1, null, -1, 3, 4]
+
+解释
+LRUCache lRUCache = new LRUCache(2);
+lRUCache.put(1, 1); // 缓存是 {1=1}
+lRUCache.put(2, 2); // 缓存是 {1=1, 2=2}
+lRUCache.get(1); // 返回 1
+lRUCache.put(3, 3); // 该操作会使得关键字 2 作废，缓存是 {1=1, 3=3}
+lRUCache.get(2); // 返回 -1 (未找到)
+lRUCache.put(4, 4); // 该操作会使得关键字 1 作废，缓存是 {4=4, 3=3}
+lRUCache.get(1); // 返回 -1 (未找到)
+lRUCache.get(3); // 返回 3
+lRUCache.get(4); // 返回 4
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= capacity &lt;= 3000</code></li> <li><code>0 &lt;= key &lt;= 10000</code></li> <li><code>0 &lt;= value &lt;= 105</code></li> <li>最多调用 <code>2 * 105</code> 次 <code>get</code> 和 <code>put</code></li></ul> <h2 id="思路"><a href="#思路" class="header-anchor">#</a> 思路</h2> <p>保存指定数量的最常访问的数据。</p> <ul><li>首先实例化时需创建一个Map对象和max来保存数据和记录数据最大数量；</li> <li>然后在get时判断有无该数据，有则放到最后一个并返回（最常访问），没有则返回-1；</li> <li>最后在put时判断有无存在，如果已有则将之移除到最后一个，若没有存在则判断是否超过数量，超过则删除第一个（最不经常访问的），再新增到最后</li></ul> <blockquote><p>TODO：双向链表</p></blockquote> <h2 id="代码"><a href="#代码" class="header-anchor">#</a> 代码</h2> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">/**
+ * @param {number} capacity
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">LRUCache</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">capacity</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>max <span class="token operator">=</span> capacity<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * @param {number} key
+ * @return {number}
+ */</span>
+<span class="token class-name">LRUCache</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">get</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 判断有无</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 有则放到第一位</span>
+    <span class="token keyword">let</span> n <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> n<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 无则返回-1</span>
+  <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * @param {number} key
+ * @param {number} value
+ * @return {void}
+ */</span>
+<span class="token class-name">LRUCache</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">put</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">key<span class="token punctuation">,</span> value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 有无存在</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 存在则先删掉 然后追加</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 不在则先判断超过数量</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">.</span>size <span class="token operator">&gt;=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>max<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 超过数量删除 删除第一个</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 新增</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * Your LRUCache object will be instantiated and called as such:
+ * var obj = new LRUCache(capacity)
+ * var param_1 = obj.get(key)
+ * obj.put(key,value)
+ */</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2023/02/20 02:32</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/my-articles/pages/leetcode/medium/002.两数相加.html" class="prev">
+        2.两数相加
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/my-articles/assets/js/app.6e1f7d07.js" defer></script><script src="/my-articles/assets/js/2.2fae7045.js" defer></script><script src="/my-articles/assets/js/47.3b2e91cf.js" defer></script>
+  </body>
+</html>
