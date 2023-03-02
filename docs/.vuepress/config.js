@@ -175,6 +175,14 @@ module.exports = {
               title: '203.移除链表元素',
               path: '/pages/leetcode/easy/203.移除链表元素',
             },
+            {
+              title: '205.同构字符串',
+              path: '/pages/leetcode/easy/205.同构字符串',
+            },
+            {
+              title: '206.反转链表',
+              path: '/pages/leetcode/easy/206.反转链表',
+            },
           ]
         },
         {
