@@ -183,6 +183,14 @@ module.exports = {
               title: '206.反转链表',
               path: '/pages/leetcode/easy/206.反转链表',
             },
+            {
+              title: '217.存在重复元素 ',
+              path: '/pages/leetcode/easy/217.存在重复元素',
+            },
+            {
+              title: '219.存在重复元素 II ',
+              path: '/pages/leetcode/easy/219.存在重复元素 II',
+            },
           ]
         },
         {
