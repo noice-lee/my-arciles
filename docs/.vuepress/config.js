@@ -191,6 +191,14 @@ module.exports = {
               title: '219.存在重复元素 II ',
               path: '/pages/leetcode/easy/219.存在重复元素 II',
             },
+            {
+              title: '225.用队列实现栈 ',
+              path: '/pages/leetcode/easy/225.用队列实现栈',
+            },
+            {
+              title: '228.汇总区间 ',
+              path: '/pages/leetcode/easy/228.汇总区间',
+            },
           ]
         },
         {
