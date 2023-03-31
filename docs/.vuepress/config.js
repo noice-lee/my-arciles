@@ -199,6 +199,14 @@ module.exports = {
               title: '228.汇总区间 ',
               path: '/pages/leetcode/easy/228.汇总区间',
             },
+            {
+              title: '231.2-的幂 ',
+              path: '/pages/leetcode/easy/231.2-的幂',
+            },
+            {
+              title: '234.回文链表 ',
+              path: '/pages/leetcode/easy/234.回文链表',
+            },
           ]
         },
         {
