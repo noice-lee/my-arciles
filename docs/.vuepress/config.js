@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const dayjs = require('dayjs');
 // 中文化
 require('dayjs/locale/zh-cn');
@@ -5,6 +7,23 @@ dayjs.locale('zh-cn');
 // formnow
 const relativeTime = require('dayjs/plugin/relativeTime');
 dayjs.extend(relativeTime);
+
+// 获取处理力扣题列表
+const leetcodeList = {};
+['easy', 'medium'].forEach(key => {
+  leetcodeList[key] = [];
+  fs.readdir(path.join(__dirname, `../pages/leetcode/${key}`), (err, p) => {
+    p.forEach(item => {
+      const fileItem = item.split('.');
+      if (fileItem.length > 2 && fileItem[0] !== '0') {
+        leetcodeList[key].push({
+          title: `${fileItem[0] * 1}.${fileItem[1]}`,
+          path: `/pages/leetcode/${key}/${fileItem[0]}.${fileItem[1]}`,
+        });
+      };
+    });
+  })
+});
 
 module.exports = {
   // header左上角文字
@@ -54,174 +73,12 @@ module.exports = {
         {
           title: '简单',
           path: '/pages/leetcode/easy/001.两数之和',
-          children: [
-            {
-              title: '1.两数之和',
-              path: '/pages/leetcode/easy/001.两数之和',
-            },
-            {
-              title: '9.回文数',
-              path: '/pages/leetcode/easy/009.回文数',
-            },
-            {
-              title: '13.罗马数字转整数',
-              path: '/pages/leetcode/easy/013.罗马数字转整数',
-            },
-            {
-              title: '14.最长公共前缀',
-              path: '/pages/leetcode/easy/014.最长公共前缀',
-            },
-            {
-              title: '20.有效的括号',
-              path: '/pages/leetcode/easy/020.有效的括号',
-            },
-            {
-              title: '21.合并两个有序链表',
-              path: '/pages/leetcode/easy/021.合并两个有序链表',
-            },
-            {
-              title: '26.删除有序数组中的重复项',
-              path: '/pages/leetcode/easy/026.删除有序数组中的重复项',
-            },
-            {
-              title: '27.移除元素',
-              path: '/pages/leetcode/easy/027.移除元素',
-            },
-            {
-              title: '35.搜索插入位置',
-              path: '/pages/leetcode/easy/035.搜索插入位置',
-            },
-            {
-              title: '58.最后一个单词的长度',
-              path: '/pages/leetcode/easy/058.最后一个单词的长度',
-            },
-            {
-              title: '66.加一',
-              path: '/pages/leetcode/easy/066.加一',
-            },
-            {
-              title: '67.二进制求和',
-              path: '/pages/leetcode/easy/067.二进制求和',
-            },
-            {
-              title: '69.x 的平方根',
-              path: '/pages/leetcode/easy/069.x 的平方根',
-            },
-            {
-              title: '83.删除排序链表中的重复元素',
-              path: '/pages/leetcode/easy/083.删除排序链表中的重复元素',
-            },
-            {
-              title: '88.合并两个有序数组',
-              path: '/pages/leetcode/easy/088.合并两个有序数组',
-            },
-            {
-              title: '94.二叉树的中序遍历',
-              path: '/pages/leetcode/easy/094.二叉树的中序遍历',
-            },
-            {
-              title: '118.杨辉三角',
-              path: '/pages/leetcode/easy/118.杨辉三角',
-            },
-            {
-              title: '119.杨辉三角 II',
-              path: '/pages/leetcode/easy/119.杨辉三角 II',
-            },
-            {
-              title: '121.买卖股票的最佳时机',
-              path: '/pages/leetcode/easy/121.买卖股票的最佳时机',
-            },
-            {
-              title: '125.验证回文串',
-              path: '/pages/leetcode/easy/125.验证回文串',
-            },
-            {
-              title: '136.只出现一次的数字',
-              path: '/pages/leetcode/easy/136.只出现一次的数字',
-            },
-            {
-              title: '141.环形链表',
-              path: '/pages/leetcode/easy/141.环形链表',
-            },
-            {
-              title: '160.相交链表',
-              path: '/pages/leetcode/easy/160.相交链表',
-            },
-            {
-              title: '168.Excel表列名称',
-              path: '/pages/leetcode/easy/168.Excel表列名称',
-            },
-            {
-              title: '169.多数元素',
-              path: '/pages/leetcode/easy/169.多数元素',
-            },
-            {
-              title: '171.Excel 表列序号',
-              path: '/pages/leetcode/easy/171.Excel 表列序号',
-            },
-            {
-              title: '190.颠倒二进制位',
-              path: '/pages/leetcode/easy/190.颠倒二进制位',
-            },
-            {
-              title: '191.位1的个数',
-              path: '/pages/leetcode/easy/191.位1的个数',
-            },
-            {
-              title: '202.快乐数',
-              path: '/pages/leetcode/easy/202.快乐数',
-            },
-            {
-              title: '203.移除链表元素',
-              path: '/pages/leetcode/easy/203.移除链表元素',
-            },
-            {
-              title: '205.同构字符串',
-              path: '/pages/leetcode/easy/205.同构字符串',
-            },
-            {
-              title: '206.反转链表',
-              path: '/pages/leetcode/easy/206.反转链表',
-            },
-            {
-              title: '217.存在重复元素 ',
-              path: '/pages/leetcode/easy/217.存在重复元素',
-            },
-            {
-              title: '219.存在重复元素 II ',
-              path: '/pages/leetcode/easy/219.存在重复元素 II',
-            },
-            {
-              title: '225.用队列实现栈 ',
-              path: '/pages/leetcode/easy/225.用队列实现栈',
-            },
-            {
-              title: '228.汇总区间 ',
-              path: '/pages/leetcode/easy/228.汇总区间',
-            },
-            {
-              title: '231.2-的幂 ',
-              path: '/pages/leetcode/easy/231.2-的幂',
-            },
-            {
-              title: '234.回文链表 ',
-              path: '/pages/leetcode/easy/234.回文链表',
-            },
-          ]
+          children: leetcodeList.easy,
         },
         {
           title: '中等',
           path: '/pages/leetcode/medium/002.两数相加',
-          children: [
-            {
-              title: '2.两数相加',
-              path: '/pages/leetcode/medium/002.两数相加',
-            },
-            {
-              title: '146.LRU 缓存',
-              path: '/pages/leetcode/medium/146.LRU 缓存',
-            },
-          ]
+          children: leetcodeList.medium,
         },
       ],
       '/pages/studyNote/': [
